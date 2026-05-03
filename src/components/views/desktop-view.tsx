@@ -21,7 +21,7 @@ export function DesktopView() {
         : generalVat;
 
   return (
-    <div className="hidden md:flex min-h-screen flex-col">
+    <div className="hidden md:flex min-h-screen flex-col max-w-7xl w-full mx-auto">
       {/* ───── Header / Masthead ───── */}
       <header className="border-b-2 border-(--color-ink) px-10 py-5 flex items-end justify-between">
         <div className="flex items-baseline gap-6">
