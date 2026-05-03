@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Gowun_Batang, IBM_Plex_Sans_KR, IBM_Plex_Mono } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
+import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
 const gowunBatang = Gowun_Batang({
@@ -72,7 +73,10 @@ export default function RootLayout({
       lang="ko"
       className={`${gowunBatang.variable} ${plexSansKr.variable} ${plexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
