@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     title: "국세청 회피하기",
     description: "프리랜서 vs 사업자등록, 한 번에 계산.",
   },
+  verification: {
+    google: "WzJU2wV95TwoMPH_RPUQ8Lu_fZWKp3XodCLwkotzR8I",
+  },
 };
 
 export const viewport: Viewport = {
