@@ -6,6 +6,7 @@ import { IndustrySelector } from "@/components/calculator/industry-selector";
 import { AdvancedOptions } from "@/components/calculator/advanced-options";
 import { ScenarioCard } from "@/components/calculator/scenario-card";
 import { BreakevenChart } from "@/components/calculator/breakeven-chart";
+import { AdSlot } from "@/components/ad-slot";
 import { formatKRW, formatKRWCompact } from "@/lib/utils";
 
 export function MobileView() {
@@ -73,6 +74,11 @@ export function MobileView() {
         </div>
       </section>
 
+      {/* ───── Ad: between hero and form ───── */}
+      <div className="px-5 mt-6">
+        <AdSlot variant="banner" />
+      </div>
+
       {/* ───── Form ───── */}
       <section className="px-5 mt-8 space-y-8">
         <RevenueInput value={calc.state.annualRevenue} onChange={calc.setRevenue} />
@@ -97,6 +103,11 @@ export function MobileView() {
         <ScenarioCard result={simpleVat} isRecommended={recommended === "simple_vat"} layout="full" />
         <ScenarioCard result={generalVat} isRecommended={recommended === "general_vat"} layout="full" />
       </section>
+
+      {/* ───── Ad: between cards and chart ───── */}
+      <div className="px-5 mt-8">
+        <AdSlot variant="banner" />
+      </div>
 
       {/* ───── Breakeven Chart ───── */}
       <section className="px-5 mt-12">

@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 interface Props {
-  current: "home" | "income-tax" | "vat";
+  current: "home" | "income-tax" | "vat" | "guide";
 }
 
 const ITEMS = [
   { key: "home", href: "/", label: "프리랜서 vs 사업자" },
   { key: "income-tax", href: "/income-tax", label: "종합소득세" },
   { key: "vat", href: "/vat", label: "부가세" },
+  { key: "guide", href: "/guide", label: "가이드" },
 ] as const;
 
 export function SiteNav({ current }: Props) {
@@ -20,7 +21,7 @@ export function SiteNav({ current }: Props) {
         >
           국세청 <span className="text-(--color-stamp)">회피하기</span>
         </Link>
-        <ul className="flex gap-1 md:gap-2 text-xs md:text-sm">
+        <ul className="flex flex-wrap gap-1 md:gap-2 text-xs md:text-sm">
           {ITEMS.map((it) => {
             const active = it.key === current;
             return (

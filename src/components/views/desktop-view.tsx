@@ -6,6 +6,7 @@ import { IndustrySelector } from "@/components/calculator/industry-selector";
 import { AdvancedOptions } from "@/components/calculator/advanced-options";
 import { ScenarioCard } from "@/components/calculator/scenario-card";
 import { BreakevenChart } from "@/components/calculator/breakeven-chart";
+import { AdSlot } from "@/components/ad-slot";
 import { formatKRW, formatKRWCompact } from "@/lib/utils";
 
 export function DesktopView() {
@@ -67,6 +68,11 @@ export function DesktopView() {
           </div>
         </div>
       </section>
+
+      {/* ───── Ad: between hero and calculator ───── */}
+      <div className="px-10 pt-8">
+        <AdSlot variant="banner" />
+      </div>
 
       {/* ───── Calculator Body ───── */}
       <section className="flex-1 grid grid-cols-12 gap-10 px-10 py-12">
@@ -133,6 +139,11 @@ export function DesktopView() {
           </div>
         </div>
       </section>
+
+      {/* ───── Ad: between cards and chart ───── */}
+      <div className="px-10 pb-4">
+        <AdSlot variant="banner" />
+      </div>
 
       {/* ───── Breakeven Chart ───── */}
       <section className="px-10 pb-12">

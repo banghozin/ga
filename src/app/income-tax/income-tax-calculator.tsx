@@ -2,6 +2,7 @@
 
 import { useId, useMemo, useState } from "react";
 import { computeComprehensive } from "@/lib/tax-calc";
+import { AdSlot } from "@/components/ad-slot";
 import { formatKRW, formatKRWCompact } from "@/lib/utils";
 
 export function IncomeTaxCalculator() {
@@ -37,6 +38,10 @@ export function IncomeTaxCalculator() {
           연봉(근로소득)과 사업소득을 합쳐 5월에 신고하는 종합소득세. 두 소득의 합이 어느 누진세율 구간으로 올라가는지 즉시 확인하세요.
         </p>
       </section>
+
+      <div className="mb-8 md:mb-10">
+        <AdSlot variant="banner" />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
         {/* Inputs */}
@@ -113,7 +118,11 @@ export function IncomeTaxCalculator() {
         </section>
       </div>
 
-      <footer className="mt-12 pt-6 border-t-2 border-(--color-ink) text-[11px] text-(--color-ink-faint) leading-relaxed">
+      <div className="mt-12">
+        <AdSlot variant="banner" />
+      </div>
+
+      <footer className="mt-8 pt-6 border-t-2 border-(--color-ink) text-[11px] text-(--color-ink-faint) leading-relaxed">
         본 시뮬레이터는 <strong>참고용 추정 계산</strong>입니다. 정확한 신고는 세무 전문가와 상의하세요. 2026 종합소득세율·근로소득공제표 적용.
       </footer>
     </main>

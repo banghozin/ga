@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
+import { AdSlot } from "@/components/ad-slot";
 
 export const metadata: Metadata = {
   title: "사이트 소개",
@@ -42,6 +43,10 @@ export default function AboutPage() {
           <strong><a href="/vat">부가세 신고액 계산</a></strong> — 일반과세·간이과세 신고액과 신고 일정 안내
         </li>
       </ul>
+
+      <div className="not-prose my-8">
+        <AdSlot variant="banner" />
+      </div>
 
       <h2>데이터 출처</h2>
       <p>

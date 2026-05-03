@@ -2,6 +2,7 @@
 
 import { useId, useMemo, useState } from "react";
 import { computeVat, INDUSTRIES, type IndustryKey, type VatType } from "@/lib/tax-calc";
+import { AdSlot } from "@/components/ad-slot";
 import { formatKRW, formatKRWCompact } from "@/lib/utils";
 
 export function VatCalculator() {
@@ -34,6 +35,10 @@ export function VatCalculator() {
           매출 ㆍ 매입 ㆍ 카드결제 비중만 입력하면 일반·간이 두 방식 모두 즉시 계산. 매출세액공제까지 자동 반영합니다.
         </p>
       </section>
+
+      <div className="mb-8 md:mb-10">
+        <AdSlot variant="banner" />
+      </div>
 
       {/* Type toggle */}
       <div className="mb-8 flex gap-2 border-2 border-(--color-ink) p-1 max-w-md">
@@ -177,7 +182,11 @@ export function VatCalculator() {
         </section>
       </div>
 
-      <footer className="mt-12 pt-6 border-t-2 border-(--color-ink) text-[11px] text-(--color-ink-faint) leading-relaxed">
+      <div className="mt-12">
+        <AdSlot variant="banner" />
+      </div>
+
+      <footer className="mt-8 pt-6 border-t-2 border-(--color-ink) text-[11px] text-(--color-ink-faint) leading-relaxed">
         본 시뮬레이터는 <strong>참고용 추정 계산</strong>입니다. 실제 신고는 홈택스 또는 세무 전문가와 상의하세요.
       </footer>
     </main>
