@@ -61,12 +61,6 @@ export default function GuideIndexPage() {
           ))}
         </section>
 
-        {sorted.length < 5 && (
-          <div className="mt-10 p-5 border border-dashed border-(--color-rule-strong) text-center text-xs text-(--color-ink-faint) tracking-wider">
-            매주 1~2개씩 새 글이 추가될 예정 ㆍ 아래 계산기들은 지금 바로 사용 가능
-          </div>
-        )}
-
         <div className="mt-12">
           <AdSlot variant="banner" />
         </div>

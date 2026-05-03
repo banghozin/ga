@@ -5,7 +5,7 @@ interface Props {
 }
 
 const ITEMS = [
-  { key: "home", href: "/", label: "프리랜서 vs 사업자" },
+  { key: "home", href: "/", label: "손익분기" },
   { key: "income-tax", href: "/income-tax", label: "종합소득세" },
   { key: "vat", href: "/vat", label: "부가세" },
   { key: "guide", href: "/guide", label: "가이드" },
